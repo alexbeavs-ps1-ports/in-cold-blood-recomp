@@ -6,9 +6,10 @@ name = "In Cold Blood"
 id = "SLUS-01294"
 players = 1
 exe = "disc/SLUS_012.94"
+disc = "disc/In Cold Blood (USA) (Disc 1).cue"
 discs = [
-    "disc/disc1.cue",
-    "disc/disc2.cue",
+    "disc/In Cold Blood (USA) (Disc 1).cue",
+    "disc/In Cold Blood (USA) (Disc 2).cue",
 ]
 disc_serials = [
     "SLUS-01294",
@@ -22,26 +23,31 @@ stack_base = "0x801FFFF0"
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "disc1.bin"
-cue_name = "disc1.cue"
+bin_name = "In Cold Blood (USA) (Disc 1).bin"
+cue_name = "In Cold Blood (USA) (Disc 1).cue"
 boot_exe = "SLUS_012.94"
-known_sizes = [555591792]
+known_sizes = [555591792, 657543936]
 known_md5 = [
   "42756266fd32297c07ed754e891bb5b4",
+  "3f3fbd4fea74448ffd0d8a7623c37fec",
 ]
 known_sha1 = [
   "9a33a893574cb28a896691a43ba4c603a0af681a",
+  "f788994d5b2974c2b97551c6e6d73965e64a3e9c",
 ]
 known_crc32 = [
   "3e3f5bcc",
+  "fd450b93",
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "in-cold-blood- Recompiled"
 memcard_dir = "saves"
 
